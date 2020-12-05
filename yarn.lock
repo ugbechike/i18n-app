@@ -4743,10 +4743,10 @@ styled-jsx@3.3.2:
     stylis "3.5.4"
     stylis-rule-sheet "0.0.10"
 
-stylis-plugin-rtl@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/stylis-plugin-rtl/-/stylis-plugin-rtl-2.0.0.tgz#5f43fb2fd6220577210b89b339b49f15aedc6b7b"
-  integrity sha512-8Hz94K25hLhZHIYzLYwXU/Qh4Xio1M+CXd4A40G1fzXwxw1kNyAVNcLPPwkL6ywMQry87WoS2XisR1ZqQZfqoQ==
+stylis-plugin-rtl@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/stylis-plugin-rtl/-/stylis-plugin-rtl-2.0.1.tgz#f6cd2d445f41c06565b2ace2b5fdc5cd8b527ca3"
+  integrity sha512-yHinsc2vQCkIKWW+PrlfcRZi0wt6y8C5eVEkc4FWkc+kX4vQgztO0Ah7Yj8UCVJUNnS2U2++6pepwd7wDuDVLg==
   dependencies:
     cssjanus "^2.0.1"
 
@@ -4771,6 +4771,11 @@ stylis@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.0.3.tgz#0d714765f3f694a685550f0c45411ebf90a9bded"
   integrity sha512-iAxdFyR9cHKp4H5M2dJlDnvcb/3TvPprzlKjvYVbH7Sh+y8hjY/mUu/ssdcvVz6Z4lKI3vsoS0jAkMYmX7ozfA==
+
+stylis@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.0.6.tgz#0d8b97b6bc4748bea46f68602b6df27641b3c548"
+  integrity sha512-1igcUEmYFBEO14uQHAJhCUelTR5jPztfdVKrYxRnDa5D5Dn3w0NxXupJNPr/VV/yRfZYEAco8sTIRZzH3sRYKg==
 
 supports-color@^5.3.0:
   version "5.5.0"
