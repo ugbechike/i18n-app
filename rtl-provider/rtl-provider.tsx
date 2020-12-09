@@ -1,5 +1,5 @@
 import { CacheProvider } from "@emotion/react";
-import createCache from "@emotion/cache";
+import createCache, { Options } from "@emotion/cache";
 import React from "react";
 import { useRouter } from "next/router";
 // import cssjanus from "cssjanus";
@@ -15,24 +15,30 @@ import stylisPluginRtl from "stylis-plugin-rtl";
 //   }
 // };
 
-const options: any = {
-  rtl: { key: "key-frame", stylisPlugins: [stylisPluginRtl] },
+export type LangDirection = "rtl" | "ltr";
+
+type CreateCacheOptions = {
+  [K in LangDirection]: Options;
+};
+
+const options: CreateCacheOptions = {
+  rtl: { key: "key-frame", stylisPlugins: [stylisPluginRtl as any] },
   ltr: { key: "key-frames" },
 };
-export type LangDirectionType = "rtl" | "ltr";
 
 type RtlProviderProps = {
-  children: any;
+  children: React.ReactNode;
 };
 
 export function RtlProvider(props: RtlProviderProps) {
-  const router = useRouter();
-  const { children = {} } = props || {};
-  const direction: LangDirectionType = router.locale == "ar" ? "rtl" : "ltr";
+  const { locale } = useRouter();
+
+  const { children } = props;
+  const direction = locale == "ar" ? "rtl" : "ltr";
 
   return (
     <CacheProvider value={createCache(options[direction])}>
-      {children || {}}
+      {children}
     </CacheProvider>
   );
 }

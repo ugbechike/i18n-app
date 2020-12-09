@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Container, SimpleGrid, Button } from "@chakra-ui/react";
+import { Box, Text, SimpleGrid, Button } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { trans } from "../../utils/trans";
 import path from "path";
@@ -64,11 +64,7 @@ const Items = () => {
           const title = locale === "ar" ? title_ar : title_en;
           return (
             <BaseCard key={index}>
-              <img
-                src={
-                  "https://cdn.shopify.com/s/files/1/0476/7986/4988/collections/3b6a545a8f309a6085625bcadcb19712.jpg?v=1599747246"
-                }
-              />
+              <img src={image_url} />
               <Text fontSize="xl">{title}</Text>
               <Text fontSize="xl">
                 {currency} {price}
@@ -82,8 +78,6 @@ const Items = () => {
 };
 
 export default function Home() {
-  const router = useRouter();
-  const { locale } = router;
   return (
     <Box
       borderWidth={1}
